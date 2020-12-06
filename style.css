@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+html {
+    background: url('img/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    font-family: 'Anton', sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    color: cornsilk;
+}
+
+.keys {
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1000px;
+    background-color: rgba(255, 255, 255, 0.74);
+    padding: 20px 20px;
+    border-radius: 10px;
+}
+
+.key {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.74);
+    margin: 20px;
+    border: 2px solid white;
+
+}
+
+.playing {
+    box-shadow: inset 0px 5px 15px -5px rgba(0, 0, 0, 0);
+    border: 2px solid aqua;
+}
+
+kbd {
+    position: absolute;
+    top: 70%;
+    right: -11%;
+    color: white;
+    font-size: 30px;
+    background-color: black;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 21%;
+}
+
+p {
+    font-variant: small-caps;
+    font-size: 14px;
+    text-align: center;
+    margin: 2px 0 0 0;
+}
