@@ -1,62 +1,152 @@
 <!DOCTYPE html>
-<html lang='en'>
-<head>
-    <meta charset='UTF-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <link rel='stylesheet' href='./style.css'>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
     <title>Awesome Drum Kit!</title>
-</head>
-<body>
+  </head>
+  <body>
+    <header>
+      <div class="skewed-header">
+        <h1 class="animate__animated animate__fadeIn animate__slow">Awesome</h1>
+        <p class="animate__animated animate__fadeIn animate__delay-2s">
+          JavaScript Drumkit
+        </p>
+        <div
+          class="scroll-container animate__animated animate__fadeIn animate__delay-3s"
+        >
+          <div class="scroll-btn">
+            <a href="#">
+              <span class="mouse">
+                <span> </span>
+              </span>
+            </a>
+            <p>scroll me</p>
+          </div>
+        </div>
+      </div>
+    </header>
     <div>
-        <h1>Awesome JavaSript Drumkit</h1>
+      <p class="drum-description">
+        This is a small example of how to make an acoustic drum sample trigger
+        with Vanilla JavaScript, CSS3 and HTML5. In the desktop version you can
+        shoot the samples with the keyboard. Each element has a key next to it
+        that triggers the sounds. In the mobile version the pads are tactile.
+        Felt free to use either version. Enjoy.
+      </p>
     </div>
-    <div class='keys'>
-        <div data-key='65' class='key' style="background-image: url(img/clap.jpg);" onclick="touchPlay('65')">
-            <kbd>A</kbd>
-            <p>clap</p>
+    <div class="container-drums">
+      <div class="keys">
+        <div
+          data-key="83"
+          class="key"
+          style="background-image: url(img/clap.jpg)"
+          onclick="touchPlay('83')"
+        >
+          <kbd>S</kbd>
+          <p class="p-elements">clap</p>
         </div>
-        <div data-key='83' class='key' style="background-image: url(img/closed-hithat.jpg);" onclick="touchPlay('83')">
-            <kbd>S</kbd>
-            <p>hithat</p>
+        <div
+          data-key="75"
+          class="key"
+          style="background-image: url(img/closed-hithat.jpg)"
+          onclick="touchPlay('75')"
+        >
+          <kbd>K</kbd>
+          <p class="p-elements">hithat</p>
         </div>
-        <div data-key='68' class='key' style="background-image: url(img/kick-drum.jpg);" onclick="touchPlay('68')">
-            <kbd>D</kbd>
-            <p>kick</p>
+        <div
+          data-key="90"
+          class="key"
+          style="background-image: url(img/kick-drum.jpg)"
+          onclick="touchPlay('90')"
+        >
+          <kbd>Z</kbd>
+          <p class="p-elements">kick</p>
         </div>
-        <div data-key='70' class='key' style="background-image: url(img/open-hithat.jpg);" onclick="touchPlay('70')">
-            <kbd>F</kbd>
-            <p>openhat</p>
+        <div
+          data-key="77"
+          class="key"
+          style="background-image: url(img/open-hithat.jpg)"
+          onclick="touchPlay('77')"
+        >
+          <kbd>M</kbd>
+          <p class="p-elements">openhat</p>
         </div>
-        <div data-key='71' class='key'style="background-image: url(img/boom.jpg);" onclick="touchPlay('71')">
-            <kbd>G</kbd>
-            <p>boom</p>
+        <div
+          data-key="79"
+          class="key"
+          style="background-image: url(img/china.jpg)"
+          onclick="touchPlay('79')"
+        >
+          <kbd>O</kbd>
+          <p class="p-elements">china</p>
         </div>
-        <div data-key='72' class='key' style="background-image: url(img/ride.jpg);" onclick="touchPlay('72')">
-            <kbd>H</kbd>
-            <p>ride</p>
+        <div
+          data-key="74"
+          class="key"
+          style="background-image: url(img/ride.jpg)"
+          onclick="touchPlay('74')"
+        >
+          <kbd>J</kbd>
+          <p class="p-elements">ride</p>
         </div>
-        <div data-key='74' class='key' style="background-image: url(img/snare.jpg);" onclick="touchPlay('74')">
-            <kbd>J</kbd>
-            <p>snare</p>
+        <div
+          data-key="65"
+          class="key"
+          style="background-image: url(img/snare.jpg)"
+          onclick="touchPlay('65')"
+        >
+          <kbd>A</kbd>
+          <p class="p-elements">snare</p>
         </div>
-        <div data-key='75' class='key' style="background-image: url(img/tom.jpg);" onclick="touchPlay('75')">
-            <kbd>K</kbd>
-            <p>tom</p>
+        <div
+          data-key="72"
+          class="key"
+          style="background-image: url(img/mid-tom.jpg)"
+          onclick="touchPlay('72')"
+        >
+          <kbd>H</kbd>
+          <p class="p-elements">tom</p>
         </div>
-        <div data-key='76' class='key' style="background-image: url(img/crash.jpg);" onclick="touchPlay('76')">
-            <kbd>L</kbd>
-            <p>crash</p>
+        <div
+          data-key="66"
+          class="key"
+          style="background-image: url(img/tom.jpg)"
+          onclick="touchPlay('66')"
+        >
+          <kbd>B</kbd>
+          <p class="p-elements">tom low</p>
         </div>
+        <div
+          data-key="76"
+          class="key"
+          style="background-image: url(img/crash.jpg)"
+          onclick="touchPlay('76')"
+        >
+          <kbd>L</kbd>
+          <p class="p-elements">crash</p>
+        </div>
+      </div>
     </div>
-    <audio data-key='65' src='sounds/clap.wav'></audio>
-    <audio data-key='83' src='sounds/hithat.wav'></audio>
-    <audio data-key='68' src='sounds/kick.wav'></audio>
-    <audio data-key='70' src='sounds/openHithat.wav'></audio>
-    <audio data-key='71' src='sounds/boom.wav'></audio>
-    <audio data-key='72' src='sounds/ride.wav'></audio>
-    <audio data-key='74' src='sounds/Snare.wav'></audio>
-    <audio data-key='75' src='sounds/tom.wav'></audio>
-    <audio data-key='76' src='sounds/crash.wav'></audio>
+    <audio data-key="83" src="sounds/CLAP.wav"></audio>
+    <audio data-key="75" src="sounds/HHCLOSE1.wav"></audio>
+    <audio data-key="90" src="sounds/BDRUM13.wav"></audio>
+    <audio data-key="77" src="sounds/HHOPEN1.wav"></audio>
+    <audio data-key="79" src="sounds/CHINA1.wav"></audio>
+    <audio data-key="74" src="sounds/RIDEEDGE.wav"></audio>
+    <audio data-key="65" src="sounds/SNARE12.wav"></audio>
+    <audio data-key="72" src="sounds/TOMHI1.wav"></audio>
+    <audio data-key="66" src="sounds/TOMLOW1.wav"></audio>
+    <audio data-key="76" src="sounds/CRASH1.wav"></audio>
+    <footer>
+        <p>Develped by Fernando Marín Sánchez</p>
+    </footer>
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
